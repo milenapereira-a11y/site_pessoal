@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Milena Loura | Minha Página Pessoal</title>
+
+    <style>
+
+        /* =========================
+           CONFIGURAÇÕES GERAIS
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fff7fb;
+            color: #3f2935;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           MENU
+        ========================== */
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            padding: 18px 30px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: #d85b91;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #3f2935;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #d85b91;
+        }
+
+
+        /* =========================
+           PARTE INICIAL
+        ========================== */
+
+        .inicio {
+            min-height: 600px;
+            padding: 80px 10%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: linear-gradient(
+                135deg,
+                #ffe5f0,
+                #fff7fb
+            );
+        }
+
+        .texto-inicio {
+            max-width: 650px;
+        }
+
+        .ola {
+            color: #d85b91;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 65px;
+            color: #3f2935;
+            margin: 10px 0 20px;
+        }
+
+        h1 span {
+            color: #d85b91;
+        }
+
+        .texto-inicio p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .botao {
+            display: inline-block;
+
+            background-color: #d85b91;
+            color: white;
+
+            padding: 13px 25px;
+            border-radius: 25px;
+
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .botao:hover {
+            background-color: #b94376;
+        }
+
+        .coracao {
+            width: 250px;
+            height: 250px;
+
+            border-radius: 50%;
+
+            background-color: #f8b8d0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 100px;
+
+            box-shadow: 0 10px 30px rgba(216, 91, 145, 0.25);
+        }
+
+
+        /* =========================
+           SEÇÕES
+        ========================== */
+
+        .secao {
+            max-width: 1100px;
+            margin: auto;
+            padding: 80px 30px;
+        }
+
+        .secao h2,
+        .aprendizado h2 {
+            text-align: center;
+
+            font-size: 35px;
+
+            color: #d85b91;
+
+            margin-bottom: 30px;
+        }
+
+        .secao > p,
+        .aprendizado > p {
+            max-width: 850px;
+
+            margin: 0 auto 20px;
+
+            text-align: center;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           HOBBIES
+        ========================== */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+
+            padding: 25px;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 10px 25px rgba(216, 91, 145, 0.2);
+        }
+
+        .icone {
+            font-size: 45px;
+
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #d85b91;
+
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           O QUE QUERO APRENDER
+        ========================== */
+
+        .aprendizado {
+            background-color: #ffe5f0;
+
+            padding: 80px 15%;
+        }
+
+
+        /* =========================
+           OBJETIVO
+        ========================== */
+
+        .objetivo {
+            background-color: white;
+        }
+
+        .frase {
+            margin: 30px auto 0;
+
+            max-width: 700px;
+
+            background-color: #ffe5f0;
+
+            padding: 20px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            color: #b94376;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           RODAPÉ
+        ========================== */
+
+        footer {
+            background-color: #3f2935;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        footer strong {
+            color: #f8b8d0;
+        }
+
+
+        /* =========================
+           CELULAR
+        ========================== */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .inicio {
+                flex-direction: column;
+
+                text-align: center;
+
+                gap: 50px;
+            }
+
+            h1 {
+                font-size: 45px;
+            }
+
+            .coracao {
+                width: 180px;
+                height: 180px;
+
+                font-size: 70px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         MENU
+    ========================== -->
+
+    <header>
+
+        <nav>
+
+            <h2>Milena Loura 💗</h2>
+
+            <ul>
+                <li>
+                    <a href="#sobre">Sobre mim</a>
+                </li>
+
+                <li>
+                    <a href="#hobbies">Hobbies</a>
+                </li>
+
+                <li>
+                    <a href="#objetivos">Objetivos</a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
+
+    <main>
+
+
+        <!-- INÍCIO -->
+
+        <section class="inicio">
+
+            <div class="texto-inicio">
+
+                <p class="ola">
+                    Olá! Eu sou
+                </p>
+
+                <h1>
+                    Milena <span>Loura</span>
+                </h1>
+
+                <p>
+                    Tenho 16 anos e esta é a minha página pessoal.
+                    Aqui você pode conhecer um pouco mais sobre mim,
+                    meus gostos, interesses e meus objetivos para o futuro.
+                </p>
+
+                <a href="#sobre" class="botao">
+                    Conheça mais sobre mim
+                </a>
+
+            </div>
+
+
+            <div class="coracao">
+                💗
+            </div>
+
+        </section>
+
+
+
+        <!-- SOBRE MIM -->
+
+        <section id="sobre" class="secao">
+
+            <h2>
+                Sobre mim
+            </h2>
+
+            <p>
+                Meu nome é <strong>Milena Loura</strong> e tenho 16 anos.
+                Sou uma pessoa que gosta de aproveitar o tempo fazendo
+                coisas que me deixam feliz e passando momentos especiais
+                com as pessoas que amo.
+            </p>
+
+            <p>
+                Gosto muito de música, dança, filmes, séries, praia,
+                compras e de experimentar coisas novas. Também adoro
+                passar tempo com meu namorado, minhas amigas e a 
+                minha família.
+            </p>
+
+        </section>
+
+
+
+        <!-- HOBBIES -->
+
+        <section id="hobbies" class="secao">
+
+            <h2>
+                Meus hobbies e interesses
+            </h2>
+
+
+            <div class="cards">
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        🎵
+                    </div>
+
+                    <h3>
+                        Música e dança
+                    </h3>
+
+                    <p>
+                        Gosto muito de ouvir músicas
+                        e também adoro dançar.
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        🎬
+                    </div>
+
+                    <h3>
+                        Filmes e séries
+                    </h3>
+
+                    <p>
+                        Amo assistir filmes e séries
+                        no meu tempo livre.
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        💬
+                    </div>
+
+                    <h3>
+                        Conversar
+                    </h3>
+
+                    <p>
+                        Gosto muito de conversar e passar
+                        momentos divertidos com as pessoas.
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        👩‍❤️‍👨
+                    </div>
+
+                    <h3>
+                        Pessoas que amo
+                    </h3>
+
+                    <p>
+                        Amo sair com meu namorado
+                        e minhas amigas.
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        📱
+                    </div>
+
+                    <h3>
+                        Celular
+                    </h3>
+
+                    <p>
+                        Gosto de mexer no celular e
+                        me distrair nas redes sociais.
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        😴
+                    </div>
+
+                    <h3>
+                        Dormir
+                    </h3>
+
+                    <p>
+                        Amo aproveitar meu tempo livre para dormir
+                        e descansar.
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        🍰
+                    </div>
+
+                    <h3>
+                        Doces e receitas
+                    </h3>
+
+                    <p>
+                        Amo comer doces e testar
+                        receitas novas.
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        👙
+                    </div>
+
+                    <h3>
+                        Compras
+                    </h3>
+
+                    <p>
+                        Gosto muito de fazer compras de
+                        maquiagem e roupas novas
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        🐶
+                    </div>
+
+                    <h3>
+                     Thor
+                    </h3>
+
+                    <p>
+                        Amo passear e ficar o tempo com
+                        o meu cachorro.
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        🏖️
+                    </div>
+
+                    <h3>
+                        Praia
+                    </h3>
+
+                    <p>
+                        Adoro ir para a praia, fazer várias viagens,
+                        aproveitar o mar e nadar.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- O QUE QUERO APRENDER -->
+
+        <section class="aprendizado">
+
+            <h2>
+                O que quero aprender
+            </h2>
+
+            <p>
+                Quero continuar aprendendo coisas novas,
+                principalmente relacionadas à tecnologia,
+                cosmética, estética, e coisas que sei que vai
+                ser importante para o meu futuro trabalho.
+            </p>
+
+            <p>
+                Também gostaria de desenvolver novas habilidades
+                que possam me ajudar nos meus estudos e
+                no meu futuro profissional.
+            </p>
+
+        </section>
+
+
+
+        <!-- OBJETIVO -->
+
+        <section id="objetivos" class="secao objetivo">
+
+            <h2>
+                Meu objetivo para o futuro
+            </h2>
+
+            <p>
+                Meu objetivo é continuar estudando para passar na faculdade que eu quero,
+                descobrir cada vez mais aquilo que gosto de fazer, 
+                viajar muito para conhecer o mundo,
+                visitar lugares novos para colecionar momentos com o meu namorado e as minhas amigas,
+                poder construir o futuro dos meus sonhos e poder viver muito mais fazendo aquilo que eu 
+                amo.
+            </p>
+
+            <p>
+                Quero conquistar e realizar minhas maiores vontades e
+                aproveitar as oportunidades que aparecerem
+                no caminho da minha vida.
+            </p>
+
+
+            <div class="frase">
+
+                ✨
+                Espero poder aproveitar cada fase da minha vida
+                da forma certa
+                ✨
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Feito por <strong>Milena Loura</strong> 💗
+        </p>
+
+        <p>
+            © 2026 - Minha Landing Page Pessoal
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
